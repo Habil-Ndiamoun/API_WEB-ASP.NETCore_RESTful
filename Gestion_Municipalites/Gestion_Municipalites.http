@@ -1,0 +1,6 @@
+@Gestion_Municipalites_HostAddress = http://localhost:5228
+
+GET {{Gestion_Municipalites_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
