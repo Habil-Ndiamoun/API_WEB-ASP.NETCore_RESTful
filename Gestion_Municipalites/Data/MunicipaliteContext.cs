@@ -11,7 +11,6 @@ namespace Gestion_Municipalites.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
            optionsBuilder.UseSqlServer(ConfigureConnectionString);
-           
         }
 
         private static string? m_configureConnectionString;
