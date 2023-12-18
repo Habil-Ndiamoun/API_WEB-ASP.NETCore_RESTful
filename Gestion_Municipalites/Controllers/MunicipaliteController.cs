@@ -55,6 +55,45 @@ namespace Gestion_Municipalites.Controllers
             return CreatedAtAction(nameof(GetById), new { id = municipalite.MunicipaliteId }, municipalite);
         }
 
+        // PUT: municipalite/5
+        [HttpPut("{municipaliteId}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult Update(int municipaliteId,  Municipalite municipalite)
+        {
+            if(!ModelState.IsValid || municipaliteId != municipalite.MunicipaliteId)
+            {
+                return BadRequest();
+            }
 
+            var municipaliteAModifier = m_municipaliteService!.GetById(municipaliteId);
+            if(municipaliteAModifier is null)
+            {
+                return NotFound();
+            }
+
+            m_municipaliteService.Update(municipalite);
+            return NoContent();
+        }
+
+        // DELETE: municipalite/5
+        [HttpDelete("{municipaliteId}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(404)]
+        public IActionResult Delete(int municipaliteId) 
+        {
+            var municipaliteASupprimer = m_municipaliteService!.GetById(municipaliteId);
+
+            if(municipaliteASupprimer is null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                m_municipaliteService.DeleteById(municipaliteId);
+                return NoContent();
+            }
+        }
     }
 }
