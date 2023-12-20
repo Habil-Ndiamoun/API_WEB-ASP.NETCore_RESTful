@@ -75,8 +75,6 @@ namespace Gestion_Municipalites.Services
             return municipaliteAModifier;
         }
 
-
-
         //5.Supprimer une municipalité
         public void DeleteById(int p_municipaliteId) 
         { 
