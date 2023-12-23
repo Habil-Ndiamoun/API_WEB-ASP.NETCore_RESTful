@@ -1,7 +1,5 @@
 using Gestion_Municipalites.Data;
 using Gestion_Municipalites.Services;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 

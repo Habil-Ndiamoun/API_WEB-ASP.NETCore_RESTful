@@ -1,7 +1,6 @@
 ﻿using Gestion_Municipalites.Models;
 using Gestion_Municipalites.Services;
 using Microsoft.AspNetCore.Mvc;
-using static System.Collections.Specialized.BitVector32;
 
 namespace Gestion_Municipalites.Controllers
 {

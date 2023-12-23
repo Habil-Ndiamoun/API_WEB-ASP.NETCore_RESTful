@@ -108,7 +108,7 @@ namespace Gestion_Municipalites.Services
                 throw new InvalidOperationException($"La municipalité de numéro {p_municipaliteId} n'existe pas dans la base de données!");
             }
 
-            var electionAAmodifier = GetElectionById(p_municipaliteId, p_electionContenantLesModifications.ElectionId);
+            var electionAAmodifier = GetElectionById(p_municipaliteId, p_electionId);
             if (electionAAmodifier == null)
             {
                 throw new InvalidOperationException($"L'election de numéro {electionAAmodifier!.ElectionId} n'existe pas dans la bd!");
