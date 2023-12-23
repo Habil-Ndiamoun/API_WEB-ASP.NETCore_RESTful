@@ -16,6 +16,7 @@ builder.Services.AddScoped<MunicipaliteContext>();
 
 // Add the MunicipaliteService and the ElectionService
 builder.Services.AddScoped<MunicipaliteService>();
+builder.Services.AddScoped<ElectionService>();
 
 
 var app = builder.Build();
