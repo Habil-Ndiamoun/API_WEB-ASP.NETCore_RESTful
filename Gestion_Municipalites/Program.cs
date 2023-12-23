@@ -18,7 +18,6 @@ builder.Services.AddScoped<MunicipaliteContext>();
 builder.Services.AddScoped<MunicipaliteService>();
 builder.Services.AddScoped<ElectionService>();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

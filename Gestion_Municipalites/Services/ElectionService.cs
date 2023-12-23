@@ -120,7 +120,6 @@ namespace Gestion_Municipalites.Services
             return p_electionContenantLesModifications;
         }
 
-
         //5.Supprimer une élection dans une municipalité
         public void DeleteById(int p_municipaliteId, int p_electionASupprimerId)
         {
